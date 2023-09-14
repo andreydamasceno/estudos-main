@@ -20,8 +20,15 @@ public class LerArquivo {
         System.out.println("Quer encontrar alguma palavra? Digite sim ou não: ");
         String querProcurarPalavra = scanner.nextLine(); // A palavra que você deseja extrair
 
+        while (!querProcurarPalavra.equals("sim") && !querProcurarPalavra.equals("não")) {
+            System.out.println("Opção inválida!");
+            System.out.println("Quer encontrar alguma palavra? Digite sim ou não: ");
+            querProcurarPalavra = scanner.nextLine();
+        }
+
         if (!querProcurarPalavra.equals("sim")) {
-            System.out.println("Até a próxima!");;
+            System.out.println("Até a próxima!");
+            ;
         } else {
 
             while (querProcurarPalavra.equals("sim")) {
@@ -44,6 +51,13 @@ public class LerArquivo {
                 }
                 System.out.println("Deseja encontrar outra palavra? Digite sim ou não:");
                 querProcurarPalavra = scanner.nextLine();
+
+                while (!querProcurarPalavra.equals("sim") && !querProcurarPalavra.equals("não")) {
+                    System.out.println("Opção inválida!");
+                    System.out.println("Quer encontrar alguma palavra? Digite sim ou não: ");
+                    querProcurarPalavra = scanner.nextLine();
+                }
+
                 if (!querProcurarPalavra.equals("sim")) {
                     System.out.println("Programa finalizado com sucesso! Até a próxima!");
                     break;
